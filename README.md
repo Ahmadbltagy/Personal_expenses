@@ -1,6 +1,6 @@
 # personal_expenses
 
-A new Flutter project.
+Personal Expenses is an application designed to organize your income and expenses.
 
 ## Getting Started
 
