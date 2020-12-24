@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:personal_expenses/widgets/transacrion_list.dart';
 import './widgets/new_transacrion.dart';
 import './models/transaction.dart';
+import './widgets/chart.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,12 +12,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.purple,
+        primarySwatch: Colors.green,
         textTheme: ThemeData.light().textTheme.copyWith(
               bodyText1: TextStyle(
                 fontFamily: 'OpenSans',
                 fontWeight: FontWeight.bold,
-                fontSize: 15.0,
+                fontSize: 18.0,
               ),
             ),
         appBarTheme: AppBarTheme(
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
                 headline6: TextStyle(
                   fontFamily: 'Quicksand',
                   fontWeight: FontWeight.bold,
+                  fontSize: 18.0,
                 ),
               ),
         ),
@@ -86,10 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
           //mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Card(
-              child: Text('CHART'),
-              color: Colors.blue,
-            ),
+            Chart(_userTransactions),
             TransactionList(_userTransactions),
           ],
         ),
